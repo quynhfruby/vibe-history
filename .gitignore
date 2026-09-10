@@ -1,0 +1,24 @@
+# Never commit captured session history or secrets into the engine repo.
+# The capture store lives OUTSIDE this repo (e.g. ~/Documents/vibe-history).
+*.jsonl
+.env
+.env.*
+*.key
+*.pem
+.DS_Store
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# Guard against accidentally copying a capture store in here.
+# (session digests are YYMMDD-HHMM-<id8>.md under a project folder)
+/store/
+/history/
+
+# machine-specific (written by install.sh)
+config.json
+*.bak.*
+
+# private project knowledge — local only, never shared
+docs/project-knowledge.md
